@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class TutorialCoordinator {
-    var mainNavigation: UINavigationController?
-    var loansNavigation: UINavigationController?
+    weak var mainNavigation: UINavigationController?
+    weak var loansNavigation: UINavigationController?
 
     init(_ mainNavigation: UINavigationController) {
         self.mainNavigation = mainNavigation
