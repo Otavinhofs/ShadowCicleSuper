@@ -10,18 +10,19 @@ import UIKit
 class TutorialViewController: UIViewController {
 
 
-//    private var moveScreenButton: UIButton = {
-//        let button = UIButton()
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.backgroundColor = .systemBlue
-//        button.setTitle("Troca", for: UIControl.State.normal)
-//
-//        return button
-//    }()
+    private var moveScreenButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemBlue
+        button.setTitle("Troca", for: UIControl.State.normal)
+
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
+        constrains()
     }
     
     var viewModel: TutorialViewModel
@@ -39,16 +40,13 @@ class TutorialViewController: UIViewController {
         print("deinit ViewController")
     }
 
-    
-//    private func contrains() {
-//        view.addSubview(moveScreenButton)
-//        NSLayoutConstraint.activate([
-//            moveScreenButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            moveScreenButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-//        ])
-//    }
-
+    private func constrains() {
+        view.addSubview(moveScreenButton)
+        NSLayoutConstraint.activate([
+            moveScreenButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            moveScreenButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
 
 }
-
 

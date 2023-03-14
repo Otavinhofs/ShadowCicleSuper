@@ -13,11 +13,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        var mainNavigation: UINavigationController? = UINavigationController(rootViewController: UIViewController())
-        window?.rootViewController = mainNavigation
-        window?.makeKeyAndVisible()
+        guard let scene = scene as? UIWindowScene else { return }
+        let appWindow = UIWindow(frame: scene.coordinateSpace.bounds)
+            appWindow.windowScene = scene
+        let navController = UINavigationController()
+        TutorialComposer.startScene(navController)
+//        appWindow.rootViewController = navController
+            appWindow.makeKeyAndVisible()
+        window = appWindow
+//        var mainNavigation: UINavigationController? = UINavigationController(rootViewController: UIViewController())
+//        var window: UIWindow? = UIWindow(windowScene: scene)
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = mainNavigation
+//        window?.makeKeyAndVisible()
+//        self.window = window
+//
+//
+        
+        
 
-        TutorialComposer.startScene(mainNavigation!)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

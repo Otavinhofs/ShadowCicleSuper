@@ -10,9 +10,9 @@ import UIKit
 
 class TutorialComposer {
     static func startScene(_ mainNavigation: UINavigationController) {
-        var coordinator: TutorialCoordinator? = TutorialCoordinator(mainNavigation)
-        var viewModel: TutorialViewModel? = TutorialViewModel(coordinator!)
-        var viewController: TutorialViewController? = TutorialViewController(viewModel!)
+        let coordinator: TutorialCoordinator? = TutorialCoordinator(mainNavigation)
+        let viewModel: TutorialViewModel? = TutorialViewModel(coordinator!)
+        let viewController: TutorialViewController? = TutorialViewController(viewModel!)
         
         coordinator?.start(viewController: viewController!)
     }

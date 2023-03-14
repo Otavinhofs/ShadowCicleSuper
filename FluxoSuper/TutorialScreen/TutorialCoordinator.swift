@@ -21,7 +21,7 @@ class TutorialCoordinator {
         loansNavigation = navigation
         mainNavigation?.present(loansNavigation!, animated: false)
         
-        exitLoansNavigation()
+//        exitLoansNavigation()
     }
     
     func exitLoansNavigation () {
