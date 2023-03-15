@@ -15,7 +15,7 @@ class TutorialViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .systemBlue
         button.setTitle("Troca", for: UIControl.State.normal)
-
+        button.addTarget(self, action: #selector(replacementScreen), for: .touchUpInside)
         return button
     }()
     
@@ -47,6 +47,10 @@ class TutorialViewController: UIViewController {
             moveScreenButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
-
+    
+    @objc private func replacementScreen() {
+        let secondScreenViewController = SecondScreenViewController()
+        navigationController?.pushViewController(secondScreenViewController, animated: true)
+        
+    }
 }
-

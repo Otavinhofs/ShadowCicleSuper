@@ -16,12 +16,13 @@ class TutorialCoordinator {
         self.mainNavigation = mainNavigation
     }
     
-    func start(viewController: TutorialViewController) {
+    func start(viewController: UIViewController) {
         let navigation = UINavigationController(rootViewController: viewController)
+        navigation.isNavigationBarHidden = true
+        navigation.modalPresentationStyle = .overFullScreen
+        mainNavigation?.present(navigation, animated: false)
         loansNavigation = navigation
-        mainNavigation?.present(loansNavigation!, animated: false)
-        
-//        exitLoansNavigation()
+
     }
     
     func exitLoansNavigation () {

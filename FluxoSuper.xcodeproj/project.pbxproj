@@ -15,6 +15,7 @@
 		0FA7765229C00C9200DEAEEB /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7765129C00C9200DEAEEB /* TutorialViewModel.swift */; };
 		0FA7765429C00CB100DEAEEB /* TutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7765329C00CB100DEAEEB /* TutorialCoordinator.swift */; };
 		0FA7765629C00CEB00DEAEEB /* TutorialComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7765529C00CEB00DEAEEB /* TutorialComposer.swift */; };
+		0FA7765B29C1001900DEAEEB /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7765A29C1001900DEAEEB /* SecondScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0FA7765129C00C9200DEAEEB /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		0FA7765329C00CB100DEAEEB /* TutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinator.swift; sourceTree = "<group>"; };
 		0FA7765529C00CEB00DEAEEB /* TutorialComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialComposer.swift; sourceTree = "<group>"; };
+		0FA7765A29C1001900DEAEEB /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				0FA7764129C009EC00DEAEEB /* TutorialViewController.swift */,
 				0FA7765129C00C9200DEAEEB /* TutorialViewModel.swift */,
 				0FA7765329C00CB100DEAEEB /* TutorialCoordinator.swift */,
+				0FA7765A29C1001900DEAEEB /* SecondScreenViewController.swift */,
 			);
 			path = TutorialScreen;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				0FA7763E29C009EC00DEAEEB /* AppDelegate.swift in Sources */,
 				0FA7765229C00C9200DEAEEB /* TutorialViewModel.swift in Sources */,
 				0FA7765629C00CEB00DEAEEB /* TutorialComposer.swift in Sources */,
+				0FA7765B29C1001900DEAEEB /* SecondScreenViewController.swift in Sources */,
 				0FA7765429C00CB100DEAEEB /* TutorialCoordinator.swift in Sources */,
 				0FA7764029C009EC00DEAEEB /* SceneDelegate.swift in Sources */,
 			);
