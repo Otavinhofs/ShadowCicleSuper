@@ -49,8 +49,6 @@ class TutorialViewController: UIViewController {
     }
     
     @objc private func replacementScreen() {
-        let secondScreenViewController = SecondScreenViewController()
-        navigationController?.pushViewController(secondScreenViewController, animated: true)
-        
+        viewModel.nextScreen()
     }
 }

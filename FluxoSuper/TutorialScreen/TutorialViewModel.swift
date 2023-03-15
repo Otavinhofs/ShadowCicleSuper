@@ -6,12 +6,21 @@
 //
 
 import Foundation
+import UIKit
 
 class TutorialViewModel {
-    var coordinator: TutorialCoordinator?
+    var coordinator: TutorialCoordinator
     
     init(_ coordinator: TutorialCoordinator) {
         self.coordinator = coordinator
+    }
+    
+    func transitionNavigationForFirstViewController() {
+        coordinator.popFirstScreen()
+    }
+    
+    func nextScreen() {
+        coordinator.nextScreen()
     }
     
     deinit {

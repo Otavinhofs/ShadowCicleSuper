@@ -11,7 +11,7 @@ import UIKit
 class TutorialCoordinator {
     weak var mainNavigation: UINavigationController?
     weak var loansNavigation: UINavigationController?
-
+    
     init(_ mainNavigation: UINavigationController) {
         self.mainNavigation = mainNavigation
     }
@@ -27,6 +27,16 @@ class TutorialCoordinator {
     
     func exitLoansNavigation () {
         mainNavigation?.dismiss(animated: false)
+    }
+    
+    func popFirstScreen() {
+        loansNavigation?.popViewController(animated: true)
+    }
+    
+    func nextScreen() {
+        let viewModel: TutorialViewModel = TutorialViewModel(self)
+        let secondScreenViewController = SecondScreenViewController(viewModel)
+        loansNavigation?.pushViewController(secondScreenViewController, animated: true)
     }
     
     deinit {

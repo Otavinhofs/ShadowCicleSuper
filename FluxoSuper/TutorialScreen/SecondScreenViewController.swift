@@ -9,7 +9,7 @@ import UIKit
 
 class SecondScreenViewController: UIViewController {
     
-    var tutorialCoordinator: TutorialCoordinator?
+    var viewModel: TutorialViewModel 
     
     private var backButton: UIButton = {
         let button = UIButton()
@@ -21,7 +21,7 @@ class SecondScreenViewController: UIViewController {
     }()
     
     @objc func BackAction() {
-        dismiss(animated: true)
+        viewModel.transitionNavigationForFirstViewController()
     }
     
     override func viewDidLoad() {
@@ -29,7 +29,16 @@ class SecondScreenViewController: UIViewController {
         setupUI()
         SetupContrains()
     }
-
+    
+    init(_ viewModel: TutorialViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setupUI() {
         view.backgroundColor = .systemBlue
         view.addSubview(backButton)
