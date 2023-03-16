@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class TutorialCoordinator {
-    weak var mainNavigation: UINavigationController?
-    weak var loansNavigation: UINavigationController?
+    var mainNavigation: UINavigationController?
+    var loansNavigation: UINavigationController?
     
     init(_ mainNavigation: UINavigationController) {
         self.mainNavigation = mainNavigation
@@ -30,6 +30,8 @@ class TutorialCoordinator {
     }
     
     func popFirstScreen() {
+        let viewModel: TutorialViewModel = TutorialViewModel(self)
+        let firstScreenViewController = TutorialViewController(viewModel)
         loansNavigation?.popViewController(animated: true)
     }
     

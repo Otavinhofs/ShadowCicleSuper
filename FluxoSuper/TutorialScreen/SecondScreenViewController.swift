@@ -9,7 +9,7 @@ import UIKit
 
 class SecondScreenViewController: UIViewController {
     
-    var viewModel: TutorialViewModel 
+    var viewModel: TutorialViewModel?
     
     private var backButton: UIButton = {
         let button = UIButton()
@@ -21,7 +21,7 @@ class SecondScreenViewController: UIViewController {
     }()
     
     @objc func BackAction() {
-        viewModel.transitionNavigationForFirstViewController()
+        viewModel?.transitionNavigationForFirstViewController()
     }
     
     override func viewDidLoad() {
